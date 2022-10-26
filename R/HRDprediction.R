@@ -1,0 +1,28 @@
+#' @title HRD Prediction
+#' @description a robust HRD predictor "HRDCNA" (Homologous Recombination
+#'     Deficiency Prediction by Copy Number Feature) based on CNA features.
+#'
+#' @param data From function signimercopy
+#'
+#' @return HRDCNA probability scores of the samples.
+#' @export
+#'
+#'
+#' @examples
+#' score_swgs <- HRDprediction(data = nmfcn_swgs)
+#' score_wgs <- HRDprediction(data = nmfcn_wgs)
+#' score_snp <- HRDprediction(data = nmfcn_snp)
+#'
+HRDprediction <- function(data){
+  library(caret)
+  library(sigminer)
+  library(gbm)
+  churn.gbmtest4 <- readRDS("./data/modeldata/churn.gbmtest4.rds")
+  bestTree <- readRDS("./data/modeldata/bestTree.rds")
+  HRDpre=predict(churn.gbmtest4, data, n.trees = bestTree, type = "response")
+  samplescore <- as.data.frame(HRDpre)
+  samplescore$sample <- data$sample
+  samplescore$type <- ifelse(samplescore$HRDpre >= 0.16, "HRD", "HRP")
+  return(HRDpre=samplescore)
+}
+
