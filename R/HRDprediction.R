@@ -22,7 +22,6 @@ HRDprediction <- function(data){
   HRDpre=predict(churn.gbmtest4, data, n.trees = bestTree, type = "response")
   samplescore <- as.data.frame(HRDpre)
   samplescore$sample <- data$sample
-  samplescore$type <- ifelse(samplescore$HRDpre >= 0.16, "HRD", "HRP")
   return(HRDpre=samplescore)
 }
 
