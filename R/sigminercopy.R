@@ -2,7 +2,7 @@
 #'
 #' @description Detail information described in Sigminer.
 #'
-#' @param df Absolute copy number profile
+#' @param data Absolute copy number profile
 #' @param genome_build Genome build version, should be 'hg19', 'hg38', 'mm9' or 'mm10'.
 #'
 #' @return The matrix of copy number features
