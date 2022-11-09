@@ -110,16 +110,16 @@ nmfcn_wgs <- sigminercopy(data = cn_wgs, "hg19")
 
 This step returns an NMF matrix containing information about CNA features and their counts. Below we can see what a part of the NMF matrix looks like.
 ```r
-head(nmfcn_wgs)
+head(nmfcn_wgs)[1:9]
 ```
 ```
-  BP10MB[0] BP10MB[1] BP10MB[2] BP10MB[3] BP10MB[4] BP10MB[5] BP10MB[>5] BPArm[0]
-1       246        29        31         4         3         1          2       11
-2       262        30        19         4         0         1          0       19
-3       147        54        50        23        21        12          9        4
-4       222        59        26         7         2         0          0        8
-5       175        61        46        18         9         4          3        5
-6       127        72        49        32        14         9         13        4
+#   BP10MB[0] BP10MB[1] BP10MB[2] BP10MB[3] BP10MB[4] BP10MB[5] BP10MB[>5] BPArm[0] BPArm[1]
+# 1       246        29        31         4         3         1          2       11        6
+# 2       262        30        19         4         0         1          0       19        5
+# 3       147        54        50        23        21        12          9        4        0
+# 4       222        59        26         7         2         0          0        8        8
+# 5       175        61        46        18         9         4          3        5        2
+# 6       127        72        49        32        14         9         13        4        1
 ```
 
 ### Calculating HRD<sub>CNA</sub> score
