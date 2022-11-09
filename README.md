@@ -1,10 +1,10 @@
-# HRD~~CNA~~: Homologous recombination deficiency prediction by copy number alteration features
+# HRD<sub>CNA</sub>: Homologous recombination deficiency prediction by copy number alteration features
 
 ## Introduction
 
-HRD~~CNA~~ is a robust HRD predictor based on copy number alteration (CNA) features. CNA information can be obtained from a diverse type of data, such as shallow WGS, WES, SNP array, and panel sequencing, and could represent a cost-effective type of biomarker for cancer diagnosis and clinical response prediction. HRD~~CNA~~ can precisely predict HR status across cancer types using CNA features data derived from different platforms and it provides a robust tool for cost-effective HRD prediction and also demonstrates the applicability of CNA features in cancer precision medicine. We made HRD~~CNA~~ into an R package `HRDCNA` for use.
+HRD<sub>CNA</sub> is a robust HRD predictor based on copy number alteration (CNA) features. CNA information can be obtained from a diverse type of data, such as shallow WGS, WES, SNP array, and panel sequencing, and could represent a cost-effective type of biomarker for cancer diagnosis and clinical response prediction. HRD<sub>CNA</sub> can precisely predict HR status across cancer types using CNA features data derived from different platforms and it provides a robust tool for cost-effective HRD prediction and also demonstrates the applicability of CNA features in cancer precision medicine. We made HRD<sub>CNA</sub> into an R package `HRDCNA` for use.
 
-The package provides you with the functions and example data to automise this process of extracting CNA features and calculating HRD~~CNA~~ scores.
+The package provides you with the functions and example data to automise this process of extracting CNA features and calculating HRD<sub>CNA</sub> scores.
 
 ## Getting started
 
@@ -122,8 +122,8 @@ head(nmfcn_wgs)
 6       127        72        49        32        14         9         13        4
 ```
 
-### Calculating HRD~~CNA~~ score
-Once we have the NMF matrix containing information about CNA features and their counts, HRD~~CNA~~ score can be calculated and we can use it for predicting HRD.
+### Calculating HRD<sub>CNA</sub> score
+Once we have the NMF matrix containing information about CNA features and their counts, HRD<sub>CNA</sub> score can be calculated and we can use it for predicting HRD.
 ```r
 score_wgs <- HRDprediction(data = nmfcn_wgs)
 head(score_wgs)
@@ -138,8 +138,8 @@ head(score_wgs)
 # 6 0.96064644 FBC020030
 ```
 
-The higher the HRD~~CNA~~ score, the greater the probability that the sample is HRD.
+The higher the HRD<sub>CNA</sub> score, the greater the probability that the sample is HRD.
 
-The development process of HRD~~CNA~~ model, its applications in biology, and generated data and figures can be achieved can be read online at [InterpretationAnalysisHRDCNA](https://github.com/XSLiuLab/InterpretationAnalysisHRDCNA).
+The development process of HRD<sub>CNA</sub> model, its applications in biology, and generated data and figures can be achieved can be read online at [InterpretationAnalysisHRDCNA](https://github.com/XSLiuLab/InterpretationAnalysisHRDCNA).
 
 
