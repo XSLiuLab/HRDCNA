@@ -19,9 +19,9 @@ HRDprediction <- function(data){
   library(gbm)
   churn.gbmtest4 <- readRDS("./data/modeldata/churn.gbmtest4.rds")
   bestTree <- readRDS("./data/modeldata/bestTree.rds")
-  HRDpre=predict(churn.gbmtest4, data, n.trees = bestTree, type = "response")
-  samplescore <- as.data.frame(HRDpre)
+  HRDCNAScore=predict(churn.gbmtest4, data, n.trees = bestTree, type = "response")
+  samplescore <- as.data.frame(HRDCNAScore)
   samplescore$sample <- data$sample
-  return(HRDpre=samplescore)
+  return(HRDCNAScore=samplescore)
 }
 
