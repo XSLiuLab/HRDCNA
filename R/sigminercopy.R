@@ -10,13 +10,13 @@
 #'
 #' @examples
 #' cn_swgs <- readRDS("./data/test/cn_60_wgs10x.rds")
-#' nmfcn_swgs <- sigminercopy(data = cn, "hg19")
+#' nmfcn_swgs <- sigminercopy(data = cn_swgs, "hg19")
 #'
 #' cn_wgs <- readRDS("./data/test/cn_60_wgs.rds")
-#' nmfcn_wgs <- sigminercopy(data = cn, "hg19")
+#' nmfcn_wgs <- sigminercopy(data = cn_wgs, "hg19")
 #'
 #' cn_snp <- readRDS("./data/test/cn_60_snp.rds")
-#' nmfcn_snp <- sigminercopy(data = cn, "hg19")
+#' nmfcn_snp <- sigminercopy(data = cn_snp, "hg19")
 #'
 sigminercopy <-function(data, genome_build = c("hg19", "hg38", "mm10", "mm9")){
   genome_build <- match.arg(genome_build)
