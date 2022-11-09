@@ -129,7 +129,7 @@ score_wgs <- HRDprediction(data = nmfcn_wgs)
 head(score_wgs)
 ```
 ```
-#       HRDCNAScore    sample
+#  HRDCNAScore    sample
 # 1 0.06710088 FBC013587
 # 2 0.05277765 FBC016006
 # 3 0.97387076 FBC016026
