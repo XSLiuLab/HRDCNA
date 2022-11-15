@@ -7,9 +7,9 @@
 sigminercopy(data, genome_build = c("hg19", "hg38", "mm10", "mm9"))
 }
 \arguments{
-\item{genome_build}{Genome build version, should be 'hg19', 'hg38', 'mm9' or 'mm10'.}
-
 \item{data}{Absolute copy number profile}
+
+\item{genome_build}{Genome build version, should be 'hg19', 'hg38', 'mm9' or 'mm10'.}
 }
 \value{
 The matrix of copy number features

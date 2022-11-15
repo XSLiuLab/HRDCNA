@@ -44,7 +44,7 @@ Useful softwares are listed below:
 - [CNVkit](https://github.com/etal/cnvkit)
 
 ``` r
-cn_wgs <- readRDS("./data/test/cn_60_wgs.rds")
+data(testdata)
 head(cn_wgs)
 ```
 ```

@@ -17,7 +17,7 @@ HRDprediction <- function(data){
   library(caret)
   library(sigminer)
   library(gbm)
-  modeldata <- HRDCNA::modeldata.RData
+  data("modeldata")
   HRDCNAScore=predict(churn.gbmtest4, data, n.trees = bestTree, type = "response")
   samplescore <- as.data.frame(HRDCNAScore)
   samplescore$sample <- data$sample
