@@ -14,7 +14,6 @@
 #' score_snp <- HRDprediction(data = nmfcn_snp)
 #'
 HRDprediction <- function(data){
-  library(caret)
   library(sigminer)
   library(gbm)
   data("modeldata")
